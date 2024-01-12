@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maths_tricks/Sequences/Sequences.dart';
+import 'Equation/QuadraticEquation.dart';
 import 'HomePage.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Sequences(),
+      home: QuadraticEquation(),
     );
   }
 }
