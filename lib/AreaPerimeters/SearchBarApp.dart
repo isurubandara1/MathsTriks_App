@@ -41,10 +41,10 @@ class _SearchBarAppState extends State<SearchBarApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 231, 199, 220),
+      backgroundColor: Color.fromARGB(255, 202, 231, 199),
       appBar: AppBar(
-        toolbarHeight: 80,
-        backgroundColor: Colors.pinkAccent,
+        toolbarHeight: 100,
+        backgroundColor: Color.fromARGB(255, 61, 128, 122),
         title: const Text('Search Continent', style: TextStyle(fontSize: 23)),
         leading: GestureDetector(
           onTap: () => Navigator.push(
@@ -67,6 +67,8 @@ class _SearchBarAppState extends State<SearchBarApp> {
                 },
                 decoration: InputDecoration(
                   hintText: 'Enter the Continent ...',
+                  hintStyle: TextStyle(
+                      fontStyle: FontStyle.italic, color: Colors.black12),
                   prefixIcon: const Icon(Icons.search),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20.0),
@@ -102,7 +104,7 @@ class _SearchBarAppState extends State<SearchBarApp> {
                       padding: const EdgeInsets.only(left: 20),
                       child: Container(
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 219, 108, 141),
+                            color: Color.fromARGB(255, 8, 155, 28),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           height: 50,

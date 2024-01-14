@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:maths_tricks/Equation/QuadraticEquation.dart';
 import 'package:maths_tricks/Fractions/Fractions.dart';
 import 'package:maths_tricks/Sequences/Sequences.dart';
 import 'AreaPerimeters/SearchBarApp.dart';
+import 'StraightLine/StraightLine.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class HomePage extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100), // Set the preferred height
         child: AppBar(
-          backgroundColor: Colors.pinkAccent,
+          backgroundColor: Color.fromARGB(255, 61, 128, 122),
           automaticallyImplyLeading: true, // Enable default back button
           title: const Align(
             alignment: Alignment.center,
@@ -91,13 +93,13 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const Padding(
-                      padding: EdgeInsets.all(6.0),
+                      padding: EdgeInsets.all(2.0),
                       child: Text(
-                        "Related to your task, click on the button to fulfill.",
+                        "Related to your task, click on the Button",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w900,
                             color: Colors.black54),
                       ),
                     ),
@@ -114,7 +116,7 @@ class HomePage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                           foregroundColor: Colors.white,
-                          backgroundColor: Color.fromARGB(255, 199, 90, 163),
+                          backgroundColor: Color.fromARGB(255, 8, 155, 28),
                           padding: const EdgeInsets.all(20),
                           fixedSize: const Size(300, 110),
                           elevation: 2,
@@ -144,7 +146,7 @@ class HomePage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                           foregroundColor: Colors.white,
-                          backgroundColor: Color.fromARGB(255, 199, 90, 163),
+                          backgroundColor: Color.fromARGB(255, 128, 150, 67),
                           padding: const EdgeInsets.all(20),
                           fixedSize: const Size(300, 110),
                           elevation: 2,
@@ -174,7 +176,7 @@ class HomePage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                           foregroundColor: Colors.white,
-                          backgroundColor: Color.fromARGB(255, 199, 90, 163),
+                          backgroundColor: Color.fromARGB(255, 14, 154, 179),
                           padding: const EdgeInsets.all(20),
                           fixedSize: const Size(300, 110),
                           elevation: 2,
@@ -193,6 +195,67 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
+                      height: 20,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Fractions()),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.white,
+                          backgroundColor: Color.fromARGB(255, 177, 52, 135),
+                          padding: const EdgeInsets.all(20),
+                          fixedSize: const Size(300, 110),
+                          elevation: 2,
+                          side: const BorderSide(
+                            color: Colors.white,
+                            width: 8,
+                          ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40))),
+                      child: const Center(
+                        child: Text('Equations',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 22,
+                            )),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => StraightLine()),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.white,
+                          backgroundColor: Color.fromARGB(255, 190, 152, 24),
+                          padding: const EdgeInsets.all(20),
+                          fixedSize: const Size(300, 110),
+                          elevation: 2,
+                          side: const BorderSide(
+                            color: Colors.white,
+                            width: 8,
+                          ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40))),
+                      child: const Center(
+                        child: Text('Straight Line',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 22,
+                            )),
+                      ),
+                    ),
+                    SizedBox(
                       height: 20,
                     ),
                   ],
