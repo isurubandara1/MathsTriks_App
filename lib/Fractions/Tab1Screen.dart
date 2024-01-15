@@ -27,7 +27,6 @@ class _Tab1ScreenState extends State<Tab1Screen> {
         x = v1! + (v3! * z);
         print(x);
         print(y);
-
         //V4>V2
       } else if (v4! % v2! == 0) {
         int z = v4! ~/ v2!;

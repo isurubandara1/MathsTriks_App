@@ -62,16 +62,28 @@ class _SequencesState extends State<Sequences> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 80,
-        backgroundColor: Colors.pinkAccent,
-        title: const Text('Circle', style: TextStyle(fontSize: 28)),
-        leading: GestureDetector(
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => HomePage()),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100), // Set the preferred height
+        child: AppBar(
+          backgroundColor: Color.fromARGB(255, 61, 128, 122),
+          automaticallyImplyLeading: true, // Enable default back button
+          title: const Align(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+              child: Padding(
+                padding: EdgeInsets.only(top: 0),
+                child: Text(
+                  'Sequences',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
           ),
-          child: const Icon(Icons.arrow_back),
         ),
       ),
       body: Center(
@@ -164,13 +176,16 @@ class _SequencesState extends State<Sequences> {
               ),
               Center(
                 child: ElevatedButton(
-                  child: Text("OK"),
+                  child: Text("OK", style: TextStyle(color: Colors.white)),
                   onPressed: () {
                     setState(() {
                       operations();
                       clearTextFields();
                     });
                   },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.green,
+                  ),
                 ),
               ),
               SizedBox(

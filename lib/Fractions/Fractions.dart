@@ -18,8 +18,12 @@ class _FractionsState extends State<Fractions> {
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 80,
-          backgroundColor: Colors.pinkAccent,
-          title: Text("Fractions"),
+          backgroundColor: Color.fromARGB(255, 61, 128, 122),
+          title: Text("Fractions",
+              style: TextStyle(
+                  fontSize: 28,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold)),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -29,23 +33,24 @@ class _FractionsState extends State<Fractions> {
               );
             },
           ),
+          centerTitle: true,
           bottom: TabBar(
             tabs: [
               Tab(
                 text: "Addition",
-                icon: Icon(Icons.add),
+                icon: Icon(Icons.add, color: Colors.white),
               ),
               Tab(
                 text: "Subtraction",
-                icon: Icon(Icons.remove),
+                icon: Icon(Icons.remove, color: Colors.white),
               ),
               Tab(
                 text: "Multiplication",
-                icon: Icon(Icons.close),
+                icon: Icon(Icons.close, color: Colors.white),
               ),
               Tab(
                 text: "Divide",
-                icon: Icon(Icons.abc),
+                icon: Icon(Icons.abc, color: Colors.white),
               ),
             ],
           ),

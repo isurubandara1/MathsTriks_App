@@ -44,16 +44,22 @@ class HomePage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            const DrawerHeader(
+            DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.pinkAccent,
+                color: Color.fromARGB(255, 61, 128, 122),
               ),
-              child: Text(
-                'Drawer Header',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    left: 70.0,
+                    bottom: 15,
+                    child: CircleAvatar(
+                      radius: 60, // Adjust the radius as needed
+                      backgroundImage: AssetImage(
+                          "assets/images/drawer.jpg"), // Replace with your image path
+                    ),
+                  ),
+                ],
               ),
             ),
             ListTile(
@@ -95,10 +101,10 @@ class HomePage extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.all(2.0),
                       child: Text(
-                        "Related to your task, click on the Button",
+                        "Related to Task, Press Button",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 22,
                             fontWeight: FontWeight.w900,
                             color: Colors.black54),
                       ),
@@ -135,7 +141,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -165,7 +171,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -195,13 +201,14 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Fractions()),
+                          MaterialPageRoute(
+                              builder: (context) => QuadraticEquation()),
                         );
                       },
                       style: ElevatedButton.styleFrom(
@@ -225,7 +232,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -256,7 +263,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                   ],
                 ),

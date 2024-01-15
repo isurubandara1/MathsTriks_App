@@ -74,6 +74,7 @@ flutter:
     - assets/images/QE.png
     - assets/images/QEform.jpg
     - assets/images/straLine.png
+    - assets/images/drawer.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
