@@ -45,7 +45,7 @@ class _TrapezoidState extends State<Trapezoid> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.green,
         title: const Text('Trapezoid', style: TextStyle(fontSize: 28)),
         leading: GestureDetector(
           onTap: () => Navigator.push(
@@ -93,6 +93,7 @@ class _TrapezoidState extends State<Trapezoid> {
                     SizedBox(width: 5),
                     Expanded(
                       child: TextField(
+                        autofocus: true,
                         controller: controllera,
                         keyboardType: TextInputType.number,
                         onChanged: (text) {

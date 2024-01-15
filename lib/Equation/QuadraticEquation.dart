@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import '../HomePage.dart';
 
 class QuadraticEquation extends StatefulWidget {
   const QuadraticEquation({Key? key}) : super(key: key);
@@ -103,6 +102,7 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
                                       fontWeight: FontWeight.bold))),
                           Expanded(
                               child: TextField(
+                            autofocus: true,
                             controller: acontroller,
                           )),
                         ],

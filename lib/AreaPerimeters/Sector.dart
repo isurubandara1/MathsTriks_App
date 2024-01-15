@@ -39,7 +39,7 @@ class _SectorState extends State<Sector> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.green,
         title: const Text('Sector', style: TextStyle(fontSize: 28)),
         leading: GestureDetector(
           onTap: () => Navigator.push(
@@ -75,6 +75,7 @@ class _SectorState extends State<Sector> {
                     SizedBox(width: 5),
                     Expanded(
                       child: TextField(
+                        autofocus: true,
                         controller: controller,
                         keyboardType: TextInputType.number,
                         onChanged: (text) {

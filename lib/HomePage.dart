@@ -63,16 +63,106 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Item 1'),
-              onTap: () {},
+              title: Text(
+                'Area & Perimeter',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SearchBarApp()));
+              },
             ),
             ListTile(
-              title: Text('Item 2'),
-              onTap: () {},
+              title: Text(
+                'Fraction',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Fractions()));
+              },
             ),
             ListTile(
-              title: Text('Item 3'),
-              onTap: () {},
+              title: Text(
+                'Sequences',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Sequences()));
+              },
+            ),
+            ListTile(
+              title: Text(
+                'Equation',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => QuadraticEquation()));
+              },
+            ),
+            ListTile(
+              title: Text(
+                'Straght Line',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => StraightLine()));
+              },
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: ListTile(
+                leading: Icon(
+                  Icons.share,
+                ),
+                title: Text(
+                  'More Apps',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onTap: () {},
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: ListTile(
+                leading: Icon(
+                  Icons.star_rate,
+                ),
+                title: Text(
+                  'Rate us',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onTap: () {},
+              ),
             ),
           ],
         ),

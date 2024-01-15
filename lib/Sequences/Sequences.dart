@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../HomePage.dart';
-
 class Sequences extends StatefulWidget {
   const Sequences({Key? key}) : super(key: key);
 

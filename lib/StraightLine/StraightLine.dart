@@ -97,6 +97,7 @@ class _StraightLineState extends State<StraightLine> {
                     ),
                     Expanded(
                         child: TextField(
+                      autofocus: true,
                       controller: x1Controller,
                     )),
                     const SizedBox(width: 10),

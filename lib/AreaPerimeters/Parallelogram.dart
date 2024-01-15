@@ -39,7 +39,7 @@ class _ParallelogramState extends State<Parallelogram> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.green,
         title: const Text('Parallelogram', style: TextStyle(fontSize: 28)),
         leading: GestureDetector(
           onTap: () => Navigator.push(
@@ -75,6 +75,7 @@ class _ParallelogramState extends State<Parallelogram> {
                     SizedBox(width: 5),
                     Expanded(
                       child: TextField(
+                        autofocus: true,
                         controller: controller,
                         keyboardType: TextInputType.number,
                         onChanged: (text) {

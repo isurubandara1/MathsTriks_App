@@ -37,7 +37,7 @@ class _CircleState extends State<Circle> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.green,
         title: const Text('Circle', style: TextStyle(fontSize: 28)),
         leading: GestureDetector(
           onTap: () => Navigator.push(
@@ -73,6 +73,7 @@ class _CircleState extends State<Circle> {
                     SizedBox(width: 5),
                     Expanded(
                       child: TextField(
+                        autofocus: true,
                         controller: controller,
                         keyboardType: TextInputType.number,
                         onChanged: (text) {

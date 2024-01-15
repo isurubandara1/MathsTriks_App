@@ -39,7 +39,7 @@ class _RectangleState extends State<Rectangle> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.green,
         title: const Text('Rectangle', style: TextStyle(fontSize: 28)),
         leading: GestureDetector(
           onTap: () => Navigator.push(
@@ -75,6 +75,7 @@ class _RectangleState extends State<Rectangle> {
                     SizedBox(width: 5),
                     Expanded(
                       child: TextField(
+                        autofocus: true,
                         controller: controller,
                         keyboardType: TextInputType.number,
                         onChanged: (text) {

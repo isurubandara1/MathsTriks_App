@@ -67,7 +67,7 @@ class _TriangleState extends State<Triangle> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.green,
         title: const Text('Triangle', style: TextStyle(fontSize: 28)),
         leading: GestureDetector(
           onTap: () => Navigator.push(
@@ -102,6 +102,7 @@ class _TriangleState extends State<Triangle> {
                   SizedBox(width: 5),
                   Expanded(
                     child: TextField(
+                      autofocus: true,
                       controller: controller,
                       keyboardType: TextInputType.number,
                       onChanged: (text) {
