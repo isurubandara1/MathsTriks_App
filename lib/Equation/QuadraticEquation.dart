@@ -25,20 +25,27 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
     b = double.tryParse(bcontroller.text) ?? 0;
     c = double.tryParse(ccontroller.text) ?? 0;
 
-    double x = (b * b) - (4 * a * c);
-    double squareRoot = sqrt(x);
-    answer1 = (-b + squareRoot) / (2 * a);
-    answer2 = (-b - squareRoot) / (2 * a);
+    double discriminant = (b * b) - (4 * a * c);
+
+    if (discriminant >= 0) {
+      double squareRoot = sqrt(discriminant);
+      answer1 = (-b + squareRoot) / (2 * a);
+      answer2 = (-b - squareRoot) / (2 * a);
+    } else {
+      // If discriminant is negative, set answers to NaN
+      answer1 = double.nan;
+      answer2 = double.nan;
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100), // Set the preferred height
+        preferredSize: Size.fromHeight(100),
         child: AppBar(
           backgroundColor: Color.fromARGB(255, 61, 128, 122),
-          automaticallyImplyLeading: true, // Enable default back button
+          automaticallyImplyLeading: true,
           title: const Align(
             alignment: Alignment.center,
             child: Padding(
@@ -72,7 +79,7 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
               Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: Text(
-                  "Fill a,b and c values accourding to above formular",
+                  "Fill a, b, and c values according to the above formula",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 22),
                 ),
@@ -80,7 +87,7 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  "(a,b, and c should be real numbers and a should be not equeal to zreo)",
+                  "(a, b, and c should be real numbers, and a should not be equal to zero)",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
                 ),
@@ -154,7 +161,7 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
                   Padding(
                     padding: const EdgeInsets.only(left: 30),
                     child: Text(
-                      "X value should be ",
+                      "X value should be",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 16,
@@ -164,13 +171,16 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
                   ),
                   SizedBox(width: 10),
                   Expanded(
-                      child: Text(
-                    "$answer1 or $answer2",
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.brown),
-                  )),
+                    child: Text(
+                      answer1.isNaN || answer2.isNaN
+                          ? "not a real number"
+                          : " ${answer1.toStringAsFixed(3)} or ${answer2.toStringAsFixed(3)}",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.brown),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(
@@ -180,6 +190,9 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
                 onPressed: () {
                   setState(() {
                     operation();
+                    // acontroller.clear();
+                    // bcontroller.clear();
+                    // ccontroller.clear();
                   });
                 },
                 child: Text(

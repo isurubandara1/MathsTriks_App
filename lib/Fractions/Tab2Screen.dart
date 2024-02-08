@@ -192,7 +192,7 @@ class _Tab2ScreenState extends State<Tab2Screen> {
                   child: Center(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.green,
+                        primary: Colors.grey,
                         elevation: 3,
                       ),
                       child: Center(
@@ -226,7 +226,7 @@ class _Tab2ScreenState extends State<Tab2Screen> {
                   style: TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
-                      color: Colors.green),
+                      color: Colors.black),
                 )),
                 Center(
                     child: Text(
@@ -234,7 +234,7 @@ class _Tab2ScreenState extends State<Tab2Screen> {
                   style: TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
-                      color: Colors.green),
+                      color: Colors.black),
                 )),
                 Center(
                     child: Text(
@@ -242,7 +242,7 @@ class _Tab2ScreenState extends State<Tab2Screen> {
                   style: TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
-                      color: Colors.green),
+                      color: Colors.black),
                 )),
               ],
             ),

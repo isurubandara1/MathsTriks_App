@@ -119,7 +119,6 @@ class _SequencesState extends State<Sequences> {
                         textAlign: TextAlign.center,
                         autofocus: true,
                         decoration: InputDecoration(
-                          hintText: "1",
                           hintStyle: TextStyle(
                             fontWeight: FontWeight.w100,
                           ),
@@ -139,7 +138,6 @@ class _SequencesState extends State<Sequences> {
                         style: TextStyle(fontSize: 25),
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                          hintText: "3",
                           hintStyle: TextStyle(
                             fontWeight: FontWeight.w100,
                           ),
@@ -159,7 +157,6 @@ class _SequencesState extends State<Sequences> {
                         style: TextStyle(fontSize: 25),
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                          hintText: "5",
                           hintStyle: TextStyle(
                             fontWeight: FontWeight.w100,
                           ),
@@ -194,16 +191,20 @@ class _SequencesState extends State<Sequences> {
                 child: Row(
                   children: [
                     Text(
-                      "Type of sequence = ",
+                      "Type of \nsequence   ",
+                      textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.brown,
                         fontStyle: FontStyle.italic,
                       ),
                     ),
                     Expanded(
                         child: Text("$seque",
-                            style: TextStyle(color: Colors.green))),
+                            style: TextStyle(
+                              color: Colors.green,
+                              fontSize: 15,
+                            ))),
                   ],
                 ),
               ),
@@ -223,8 +224,11 @@ class _SequencesState extends State<Sequences> {
                       ),
                     ),
                     Expanded(
-                        child:
-                            Text("$y1", style: TextStyle(color: Colors.green))),
+                        child: Text("$y1",
+                            style: TextStyle(
+                              color: Colors.green,
+                              fontSize: 20,
+                            ))),
                   ],
                 ),
               ),
@@ -244,8 +248,11 @@ class _SequencesState extends State<Sequences> {
                       ),
                     ),
                     Expanded(
-                        child:
-                            Text("$d", style: TextStyle(color: Colors.green))),
+                        child: Text("$d",
+                            style: TextStyle(
+                              color: Colors.green,
+                              fontSize: 20,
+                            ))),
                   ],
                 ),
               ),

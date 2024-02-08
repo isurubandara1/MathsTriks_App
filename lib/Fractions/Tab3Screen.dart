@@ -176,7 +176,7 @@ class _Tab3ScreenState extends State<Tab3Screen> {
                   child: Center(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.green,
+                        primary: Colors.grey,
                         elevation: 3,
                       ),
                       child: Center(
@@ -210,7 +210,7 @@ class _Tab3ScreenState extends State<Tab3Screen> {
                   style: TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
-                      color: Colors.green),
+                      color: Colors.black),
                 )),
                 Center(
                     child: Text(
@@ -218,7 +218,7 @@ class _Tab3ScreenState extends State<Tab3Screen> {
                   style: TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
-                      color: Colors.green),
+                      color: Colors.black),
                 )),
                 Center(
                     child: Text(
@@ -226,7 +226,7 @@ class _Tab3ScreenState extends State<Tab3Screen> {
                   style: TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
-                      color: Colors.green),
+                      color: Colors.black),
                 )),
               ],
             ),
