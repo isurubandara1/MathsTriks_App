@@ -109,6 +109,7 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
                                       fontWeight: FontWeight.bold))),
                           Expanded(
                               child: TextField(
+                            keyboardType: TextInputType.number,
                             autofocus: true,
                             controller: acontroller,
                           )),
@@ -128,6 +129,7 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
                                       fontWeight: FontWeight.bold))),
                           Expanded(
                               child: TextField(
+                            keyboardType: TextInputType.number,
                             controller: bcontroller,
                           )),
                         ],
@@ -148,6 +150,7 @@ class _QuadraticEquationState extends State<QuadraticEquation> {
                             fontSize: 20, fontWeight: FontWeight.bold)),
                     Expanded(
                         child: TextField(
+                      keyboardType: TextInputType.number,
                       controller: ccontroller,
                     )),
                   ],

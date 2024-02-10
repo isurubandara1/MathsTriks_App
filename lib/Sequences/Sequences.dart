@@ -112,6 +112,7 @@ class _SequencesState extends State<Sequences> {
                   children: [
                     Expanded(
                       child: TextField(
+                        keyboardType: TextInputType.number,
                         controller: x1,
                         style: TextStyle(
                           fontSize: 25,
@@ -134,6 +135,7 @@ class _SequencesState extends State<Sequences> {
                     ),
                     Expanded(
                       child: TextField(
+                        keyboardType: TextInputType.number,
                         controller: x2,
                         style: TextStyle(fontSize: 25),
                         textAlign: TextAlign.center,
@@ -153,6 +155,7 @@ class _SequencesState extends State<Sequences> {
                     SizedBox(width: 10),
                     Expanded(
                       child: TextField(
+                        keyboardType: TextInputType.number,
                         controller: x3,
                         style: TextStyle(fontSize: 25),
                         textAlign: TextAlign.center,

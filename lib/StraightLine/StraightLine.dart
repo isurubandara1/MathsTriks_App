@@ -97,6 +97,7 @@ class _StraightLineState extends State<StraightLine> {
                     ),
                     Expanded(
                         child: TextField(
+                      keyboardType: TextInputType.number,
                       autofocus: true,
                       controller: x1Controller,
                     )),
@@ -109,6 +110,7 @@ class _StraightLineState extends State<StraightLine> {
                     ),
                     Expanded(
                         child: TextField(
+                      keyboardType: TextInputType.number,
                       controller: y1Controller,
                     )),
                   ],
@@ -125,7 +127,11 @@ class _StraightLineState extends State<StraightLine> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Expanded(child: TextField(controller: x2Controller)),
+                    Expanded(
+                        child: TextField(
+                      controller: x2Controller,
+                      keyboardType: TextInputType.number,
+                    )),
                     const SizedBox(width: 10),
                     const Text(
                       "Y2 = ",
@@ -135,6 +141,7 @@ class _StraightLineState extends State<StraightLine> {
                     ),
                     Expanded(
                         child: TextField(
+                      keyboardType: TextInputType.number,
                       controller: y2Controller,
                     )),
                   ],
