@@ -1,16 +1,27 @@
-# maths_tricks
+# Maths Tricks App
 
-A new Flutter project.
+With this application, students can discover solutions for various mathematical problems, including fractions, straight lines, area, perimeter, and more. When users input data into the app, it promptly generates answers for specific questions.
+
+## Screenshots
+
+![1](https://github.com/isurubandara1/MathsTriks_App/assets/111081151/e9154e27-ea20-4624-8cc1-bc1fc80daca3)
+
+
+## Technologies Used
+
+- **Flutter Framework**: A cross-platform framework for building native applications for mobile, web, and desktop from a single codebase.
+- **Dart Language**: The programming language used for building Flutter applications.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. **Clone the repository:**
 
-A few resources to get you started if this is your first Flutter project:
+   ```bash
+   git clone https://github.com/isurubandara1/MathsTriks_App.git
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. **Install Dependencies:**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   ```bash
+    flutter pub get
+    flutter run 
+
